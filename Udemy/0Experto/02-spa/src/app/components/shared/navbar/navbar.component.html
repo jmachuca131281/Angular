@@ -1,0 +1,30 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><img src="assets/img/A-64.png" width="30" height="30" alt="Set de tres tuallitas para bebe"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <!-- active -->
+            <li class="nav-item" routerLinkActive="active" >
+                <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['heroes']">Heroes <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['about']">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['link']">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Bucar héroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto >
+            <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
+        </form>
+    </div>
+</nav>

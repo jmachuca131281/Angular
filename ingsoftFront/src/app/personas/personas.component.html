@@ -1,0 +1,22 @@
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Email</th>
+      <th scope="col">Género</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of personas">
+      <th scope="row">{{ p.id }}</th>
+      <td>{{ p.nombres }}</td>
+      <td>{{ p.apellidos }}</td>
+      <td>{{ p.fechaNac }}</td>
+      <td>{{ p.email }}</td>
+      <td>{{ p.genero }}</td>
+    </tr>
+  </tbody>
+</table>

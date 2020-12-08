@@ -1,0 +1,5 @@
+<form>
+    <button [(ngModel)]="randomSelected" (click)="loadImages()"
+        mat-raised-button color="primary" class="boton">Random</button>
+    <div *ngFor="let i of randomImages"><img [src]="i"> </div>
+</form>

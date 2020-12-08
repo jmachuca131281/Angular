@@ -1,0 +1,31 @@
+<form (ngSubmit)="create()"> <!--Create(): Crea un observable que ejecutará la función específica cuando un operador se suscriva-->
+  <!-- ngSubmit: Directiva que especifica una función a correr cuando el formulario es presentada "submitted" -->
+  <div class="form-group">
+    <label for="id">Id: </label>
+    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="personas.id">
+  </div>
+  <div class="form-group">
+    <label for="nombres">Nombres</label>
+    <input type="text" class="form-control" id="nombres" name="nombres" [(ngModel)]="personas.nombres">
+  </div>
+  <div class="form-group">
+    <label for="apellidos">Apellidos</label>
+    <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="personas.apellidos">
+  </div>
+  <div class="form-group">
+    <label for="fechaNac">Fecha de Nacimiento</label>
+    <input type="text" class="form-control" id="fechaNac" name="fechaNac" [(ngModel)]="personas.fechaNac">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="personas.email">
+  </div>
+  <div class="form-group">
+    <label for="genero">Genero</label>
+    <select id="genero" name="genero" [(ngModel)]="personas.genero">
+      <option value="F">Femenino</option>
+      <option value="M">Masculino</option>
+    </select>
+  </div>
+  <button role="button" class="btn btn-primary">Crear</button>
+</form>

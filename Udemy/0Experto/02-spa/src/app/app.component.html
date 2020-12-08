@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container main-container">
+  <router-outlet></router-outlet>
+</div>
+<hr>
+<h1>Las tres formas de instalar bootstrap en angular</h1><br>
+<div>
+  <p><strong>Primera:</strong> Copiar los enlaces de bootstrap en la página y la dependiencia esta en el internet y se deben agregar en el fichero intex.html en el header y body.</p><hr>
+  
+  <p><strong>Segunda:</strong> descargar el archivo fuente, agregar los archivos en assets, en la ruta assets/libs/bootstrap/css y js. </p>
+  <p>En la siguiente ruta:</p>
+  <pre>Aplicación\src\assets\libs\bootstrap\css</pre>
+  <pre>Aplicación\src\assets\libs\bootstrap\js</pre>
+  <p>Por último se debe agregar el siguinete link en index.html link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css"</p><hr>
+  
+  <p><strong>Tercera:</strong> descargar en CLI con npm install bootstrap --save. Agregar en el archivo angular.json las rutas en styles y scripts como en el siguiente ejemplo:</p>
+  <pre>
+  "styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ],
+  "scripts": [
+    "node_modules/jquery/dist/jquery.slim.min.js",
+    "node_modules/popper.js/dist/umd/popper.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ]
+  </pre>
+  <p>Al correr la aplicación va a presentar un inconveniente por las librerias jquery y popper que deben ser intaladas con el comando npm install jquery y popper --saver</p>
+</div>

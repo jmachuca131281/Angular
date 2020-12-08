@@ -1,0 +1,13 @@
+<!-- Uso de interpolación-->
+<p>Hola papi te estoy esperando {{nombre}} !</p>
+<!-- Uso del property-->
+<img [src]="paisaje"/>
+<p>{{contador}}</p>
+<input type="button" value="+" (click)="incrementar()"/>
+<input type="button" value="-" (click)="decrementar()"/>
+<!-- Binding a nivel de objetos-->
+<ul>
+    <li>{{persona.nombre}}</li>
+    <li>{{persona.apellidos}}</li>
+    <li>{{persona.edad}}</li>
+</ul>

@@ -1,0 +1,10 @@
+<form>
+    <label for="listaRazas">Elegir raza:</label>
+    <select id="listaRazas" name="listaRazas" [(ngModel)]="breedSelected" (change)="loadImages()">
+        <option *ngFor="let b of breedList" [value]="b">{{b}}</option>
+    </select>
+    <br>
+    <div *ngFor="let i of breedImages">
+        <img [src]="i">
+    </div>
+</form>
